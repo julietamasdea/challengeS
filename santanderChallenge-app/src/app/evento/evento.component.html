@@ -1,0 +1,29 @@
+<div class="card bg-light mb-3">
+  <div class="card-header">Temperatura: {{temperaturaDataTempCelcius}}°</div>
+  <div class="card-body">
+    <h5 class="card-title">Eventos</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Nombre</th>
+          <th>Fecha</th>
+          <th>Participantes</th>
+          <th>Paquetes de cerveza</th>
+          <th>Cervezas</th>
+          <th>Cantidad por persona</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evento of eventos">
+          <td>{{evento.nombre}}</td>
+          <td>{{evento.fecha | slice:0:10}}</td>
+          <td>{{evento.cantidadUsuarios}}</td>
+          <td>{{getCantidadBebidas(evento.cantidadUsuarios,temperaturaDataTempCelcius)}}</td>
+          <td>{{cantCervezas}}</td>
+          <td>{{setBooleanCantidad(temperaturaDataTempCelcius)}}</td>
+
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

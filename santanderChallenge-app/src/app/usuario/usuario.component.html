@@ -1,0 +1,23 @@
+<div class="card bg-light mb-3">
+  <div class="card-body">
+    <h5 class="card-title">Listado de usuarios</h5>
+    <table class="table table-bordered table-striped">
+      <thead>
+        <tr>
+          <th>Id</th>
+          <th>Nombre</th>
+          <th>Apellido</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let usuario of usuarios">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.nombre}}</td>
+          <td>{{usuario.apellido}}</td>
+          <td>{{usuario.email}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
